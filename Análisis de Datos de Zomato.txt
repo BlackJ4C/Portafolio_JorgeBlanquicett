@@ -1,0 +1,25 @@
+Análisis de Datos de Zomato
+Este conjunto de scripts de Python se ha diseñado para analizar datos de Zomato, específicamente enfocándose en la volatilidad y el volumen de acciones negociadas. Se utilizan bibliotecas de visualización como matplotlib para mostrar la relación entre diferentes variables y para explorar la interacción entre altos niveles de volatilidad y volumen.
+
+Contenido
+Diagrama de Dispersión: Visualización de la relación entre la volatilidad y el volumen de acciones negociadas de Zomato.
+Diagrama de Venn: Comparación de los días con alta volatilidad y alto volumen para identificar intersecciones.
+Carga y Visualización de Datos: Carga de datos desde un archivo CSV y exploración inicial de los mismos.
+Descripción de los Scripts
+Diagrama de Dispersión
+Archivo: scatter_plot.py
+Función: Este script genera un diagrama de dispersión que muestra la relación entre la volatilidad (Volatility) y el volumen (Volume) de acciones negociadas. Utiliza un marcador azul semitransparente para representar cada punto de datos.
+Bibliotecas Utilizadas: matplotlib.pyplot
+Diagrama de Venn
+Archivo: venn_diagram.py
+Función: Este script calcula el número total de días, los días con alta volatilidad, los días con alto volumen, y la intersección de estos dos conjuntos. Posteriormente, crea un diagrama de Venn para visualizar esta relación.
+Bibliotecas Utilizadas: matplotlib_venn, matplotlib.pyplot
+Carga y Visualización de Datos
+Archivo: data_inspection.py
+Función: Carga los datos de Zomato desde un archivo CSV ubicado en un path específico. Muestra las primeras filas del dataframe y proporciona un resumen estadístico de los datos.
+Bibliotecas Utilizadas: pandas
+Requisitos
+Python 3.x
+Pandas
+Matplotlib
+matplotlib_venn
