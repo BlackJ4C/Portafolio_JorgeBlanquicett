@@ -1,0 +1,39 @@
+Codigos de archivo de zomato en el cual estuve integrado como analista de datos y fui encargado de limpiar y conseguir porcentajes certeros de información 
+
+plt.figure(figsize=(10, 6))
+plt.scatter(zomato_df['Volatility'], zomato_df['Volume'], alpha=0.5, color='blue')
+plt.title('Diagrama de Dispersión entre Volatilidad y Volumen de Acciones Negociadas')
+plt.xlabel('Volatilidad')
+plt.ylabel('Volumen de Acciones Negociadas')
+plt.grid(True)
+
+
+
+from matplotlib_venn import venn2
+import matplotlib.pyplot as plt
+
+# Cálculos para el diagrama de Venn
+total_days = len(zomato_df)
+high_volatility_days = len(zomato_df[volatility_high])
+high_volume_days = len(zomato_df[volume_high])
+intersection_days = len(high_volatility_and_volume)
+
+# Crear el diagrama de Venn
+plt.figure(figsize=(8, 8))
+venn2(subsets=(high_volatility_days, high_volume_days, intersection_days),
+      set_labels=('Días de Alta Volatilidad', 'Días de Alto Volumen'))
+
+plt.title('Interacción entre Alta Volatilidad y Alto Volumen de Acciones Negociadas')
+plt.show()
+
+import pandas as pd
+
+# Cargar el archivo CSV para examinar los primeros registros y obtener una descripción general
+data_path = '/mnt/data/zomato.csv'
+zomato_df = pd.read_csv(data_path)
+
+# Mostrar las primeras filas y un resumen de los datos
+zomato_df.head(), zomato_df.info(), zomato_df.describe()
+
+
+
